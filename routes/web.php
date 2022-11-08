@@ -13,4 +13,8 @@ use App\Http\Controllers\VisitorController;
 |
 */
 
+Route::get('/', function (){
+    return view('index');
+});
+
 Route::resource('/visitors', VisitorController::class);

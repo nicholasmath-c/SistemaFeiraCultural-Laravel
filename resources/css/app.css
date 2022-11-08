@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+font-face {
+    font-family: "Netflix Light";
+    src: url("fonts/NetflixSans-Light.otf");
+}
+
+@font-face {
+    font-family: "Netflix Regular";
+    src: url("fonts/NetflixSans-Regular.otf");
+}
+
+@font-face {
+    font-family: "Netflix Medium";
+    src: url("fonts/NetflixSans-Medium.otf");
+}
+
+@font-face {
+    font-family: "Netflix Bold";
+    src: url("fonts/NetflixSans-Bold.otf");
+}
+
+input.input-check:valid {
+    background: url('https://api.iconify.design/akar-icons/check.svg?color=%2316a34a') no-repeat right center / 3%, #333;
+    border: 1px solid #16a34a;
+    background-origin: content-box;
+}
+
+input.input-check:invalid {
+    background: url('https://api.iconify.design/bi/exclamation-lg.svg?color=%23e50914') no-repeat right center / contain, #333;
+    border: 1px solid #E50914;
+    background-origin: content-box;
+}

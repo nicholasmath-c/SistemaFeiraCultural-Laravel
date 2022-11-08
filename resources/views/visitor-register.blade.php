@@ -1,4 +1,4 @@
-@extends('templates.template-header')
+@extends('templates.template-header-w-btn')
 
 @section('title')
     Cadastro
