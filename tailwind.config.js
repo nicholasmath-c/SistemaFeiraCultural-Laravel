@@ -4,6 +4,8 @@ module.exports = {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: { 
@@ -20,6 +22,7 @@ module.exports = {
         'netflix-medium' : ['Netflix Medium'],
         'netflix-bold' : ['Netflix Bold']
       }
+      
     },
   },
   plugins: [],

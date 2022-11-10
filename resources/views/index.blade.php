@@ -16,7 +16,7 @@
 
                 <img src="{{url("images/aluno.png")}}" class="w-24 h-24 md:w-32 md:h-32 rounded-md hover:animate-pulse">
 
-                <h2 class="text-white text-xs md:text-lg font-netflix-light">Visitante</h2>
+                <h2 class="text-white text-xs md:text-lg font-light">Visitante</h2>
 
             </a>
 
@@ -24,7 +24,7 @@
 
                 <img src="{{url("images/professor.png")}}" class="w-24 h-24 md:w-32 md:h-32 rounded-md hover:animate-pulse">
 
-                <h2 class="text-white text-xs md:text-lg font-netflix-light">Professor</h2>
+                <h2 class="text-white text-xs md:text-lg font-light">Professor</h2>
 
             </a>
 

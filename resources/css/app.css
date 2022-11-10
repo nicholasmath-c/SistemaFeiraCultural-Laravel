@@ -4,22 +4,22 @@
 
 font-face {
     font-family: "Netflix Light";
-    src: url("fonts/NetflixSans-Light.otf");
+    src: url("../../public/fonts/NetflixSans-Light.otf");
 }
 
 @font-face {
     font-family: "Netflix Regular";
-    src: url("fonts/NetflixSans-Regular.otf");
+    src: url("../../public/fonts/NetflixSans-Regular.otf");
 }
 
 @font-face {
     font-family: "Netflix Medium";
-    src: url("fonts/NetflixSans-Medium.otf");
+    src: url("../../public/fonts/NetflixSans-Medium.otf");
 }
 
 @font-face {
     font-family: "Netflix Bold";
-    src: url("fonts/NetflixSans-Bold.otf");
+    src: url("../../public/fonts/NetflixSans-Bold.otf");
 }
 
 input.input-check:valid {
