@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VisitorController;
 
@@ -13,8 +14,17 @@ use App\Http\Controllers\VisitorController;
 |
 */
 
-Route::get('/', function (){
+Route::get('/', function(){
     return view('index');
 });
 
-Route::resource('/visitors', VisitorController::class);
+Route::prefix('visitor')->group(function(){
+    Route::get('/login', function(){
+        return view('visitor-login');
+    })->name('login');
+    Route::post('/login', [AuthController::class, 'visitor_store']);
+});
+
+Route::prefix('admin')->group(function(){
+    Route::resource('/visitors', VisitorController::class);
+});

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Visitor;
+use App\Http\Requests\VisitorRequest;
 
 class VisitorController extends Controller
 {
@@ -33,7 +34,7 @@ class VisitorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(VisitorRequest $request)
     {
         $cad=Visitor::create([
             'name'=>$request->name,
@@ -43,7 +44,7 @@ class VisitorController extends Controller
         ]);
 
         if($cad)
-            return redirect('visitors/create')->with('message', 'CADASTRO REALIZADO COM SUCESSO!');
+            return redirect('admin/visitors/create')->with('message', 'CADASTRO REALIZADO COM SUCESSO!');
     }
 
     /**
@@ -75,7 +76,7 @@ class VisitorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(VisitorRequest $request, $id)
     {
         //
     }

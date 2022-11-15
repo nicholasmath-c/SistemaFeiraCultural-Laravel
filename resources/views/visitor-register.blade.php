@@ -13,14 +13,22 @@
                 <div class="popup-inner">
                     <div class="popup-content">
                         <div class="content text-center">
-                            <h6 class="text-red-netflix font-bold">{{ Session::get('message') }}</h6>
+                            <h6 class=" text-emerald-500 font-bold">{{ Session::get('message') }}</h6>
                         </div>
                     </div>
                 </div>
             </section>
         @endif
 
-        <form name="frmCad" id="frmCad" method="post" action="{{ url('visitors') }}"
+        @if (isset($errors) && count($errors) > 0)
+            <div class="content text-center">
+                @foreach ($errors->all() as $error)
+                    <h6 class="text-red-netflix font-bold">{{$error}}<br></h6>
+                @endforeach
+            </div>
+        @endif
+
+        <form name="frmCad" id="frmCad" method="post" action="{{ url('admin/visitors') }}"
             class="bg-black/80 w-4/5 lg:w-3/6 mx-auto p-3 md:p-5 rounded-md">
             @csrf
 
