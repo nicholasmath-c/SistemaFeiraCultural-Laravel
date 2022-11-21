@@ -28,3 +28,7 @@ Route::prefix('visitor')->group(function(){
 Route::prefix('admin')->group(function(){
     Route::resource('/visitors', VisitorController::class);
 });
+
+Route::get('/visitor-avaliation', function(){
+    return view('visitor-avaliation');
+});

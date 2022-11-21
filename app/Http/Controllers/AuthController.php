@@ -19,7 +19,7 @@ class AuthController extends Controller
 
         if (Visitor::where('email', $request->email)->first()) {
             $request->session()->put('visitor', $request->input('email'));
-            return view('visitor-crud');
+            return view('visitor-avaliation');
         } else {
             return redirect('visitor/login')->with('message', 'O e-mail inserido não corresponde a nenhum cadastro.');
         }
