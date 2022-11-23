@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VisitorController;
+use App\Http\Controllers\VisitorAvaliationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,4 @@ Route::prefix('admin')->group(function(){
     Route::resource('/visitors', VisitorController::class);
 });
 
-Route::get('/visitor-avaliation', function(){
-    return view('visitor-avaliation');
-});
+Route::resource('visitor-avaliations', VisitorAvaliationController::class);

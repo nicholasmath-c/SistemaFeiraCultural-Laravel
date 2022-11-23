@@ -9,7 +9,7 @@
     <section class="h-auto flex flex-col justify-around p-3 md:p-5 border border-blue-600">
 
         <!-- Carrossel -->
-        <form
+        <form method="POST" action="{{url('visitor-avaliations')}}"
             class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events bg-black/80 w-11/12 mx-auto p-3 md:p-5 rounded-md border border-red-600">
 
             <h1 class="text-white text-lg sm:text-xl md:text-3xl m-3 md:m-5">Catálogo de Apresentações</h1>
@@ -18,10 +18,12 @@
                 style="transition-duration: 0ms; transform: translate3d(-1620px, 0px, 0px);">
 
                 <!-- Slide 1 -->
+
                 <fieldset class="swiper-slide flex flex-col items-left justify-center p-3 md:p-5 space-y-3"
                     data-swiper-slide-index="0" role="group" aria-label="1 / 12">
 
-                    <h2 class="text-white text-xs sm:text-md md:text-lg lg:text-xl">1º MTEC Administração (Manhã) - Japão
+                    <h2 class="text-white text-xs sm:text-md md:text-lg lg:text-xl">1º MTEC Administração (Manhã) -
+                        Japão
                     </h2>
 
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/2560px-Flag_of_Japan.svg.png"
@@ -33,7 +35,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-JP" name="mencao" value="I-JP">
+                                id="JPmention" name="JPmention" value="I">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-JP">Insuficiente</label>
 
                         </div>
@@ -42,7 +44,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-JP" name="mencao" value="R-JP">
+                                id="JPmention" name="JPmention" value="R">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-JP">Regular</label>
 
                         </div>
@@ -50,7 +52,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-JP" name="mencao" value="B-JP">
+                                id="JPmention" name="JPmention" value="B">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-JP">Bom</label>
 
                         </div>
@@ -59,14 +61,14 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-JP" name="mencao" value="MB-JP">
+                                id="JPmention" name="JPmention" value="MB">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-JP">Muito Bom</label>
 
                         </div>
 
                     </div>
 
-                    <textarea id="CMT-JP"
+                    <textarea id="JPcomment"
                         class="bg-black-netflix placeholder:text-gray-netflix text-sm sm:text-md md:text-2xl border-none w-full rounded-md text-white"
                         placeholder="Comentário (Opcional):" rows="3" cols="50"></textarea>
 
@@ -88,7 +90,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-AU" name="mencao" value="I-AU">
+                                id="I-AU" name="mention" value="I-AU">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-AU">Insuficiente</label>
 
                         </div>
@@ -97,7 +99,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-AU" name="mencao" value="R-AU">
+                                id="R-AU" name="mention" value="R-AU">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-AU">Regular</label>
 
                         </div>
@@ -105,7 +107,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-AU" name="mencao" value="B-AU">
+                                id="B-AU" name="mention" value="B-AU">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-AU">Bom</label>
 
                         </div>
@@ -114,7 +116,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-AU" name="mencao" value="MB-AU">
+                                id="MB-AU" name="mention" value="MB-AU">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-AU">Muito Bom</label>
 
                         </div>
@@ -143,7 +145,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-ING" name="mencao" value="I-ING">
+                                id="I-ING" name="mention" value="I-ING">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-ING">Insuficiente</label>
 
                         </div>
@@ -152,7 +154,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-ING" name="mencao" value="R-ING">
+                                id="R-ING" name="mention" value="R-ING">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-ING">Regular</label>
 
                         </div>
@@ -160,7 +162,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-ING" name="mencao" value="B-ING">
+                                id="B-ING" name="mention" value="B-ING">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-ING">Bom</label>
 
                         </div>
@@ -169,7 +171,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-ING" name="mencao" value="MB-ING">
+                                id="MB-ING" name="mention" value="MB-ING">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-ING">Muito Bom</label>
 
                         </div>
@@ -198,7 +200,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-ESP" name="mencao" value="I-ESP">
+                                id="I-ESP" name="mention" value="I-ESP">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-ESP">Insuficiente</label>
 
                         </div>
@@ -207,7 +209,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-ESP" name="mencao" value="R-ESP">
+                                id="R-ESP" name="mention" value="R-ESP">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-ESP">Regular</label>
 
                         </div>
@@ -215,7 +217,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-ESP" name="mencao" value="B-ESP">
+                                id="B-ESP" name="mention" value="B-ESP">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-ESP">Bom</label>
 
                         </div>
@@ -224,7 +226,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-ESP" name="mencao" value="MB-ESP">
+                                id="MB-ESP" name="mention" value="MB-ESP">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-ESP">Muito Bom</label>
 
                         </div>
@@ -253,7 +255,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-HOL" name="mencao" value="I-HOL">
+                                id="I-HOL" name="mention" value="I-HOL">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-HOL">Insuficiente</label>
 
                         </div>
@@ -262,7 +264,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-HOL" name="mencao" value="R-HOL">
+                                id="R-HOL" name="mention" value="R-HOL">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-HOL">Regular</label>
 
                         </div>
@@ -270,7 +272,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-HOL" name="mencao" value="B-HOL">
+                                id="B-HOL" name="mention" value="B-HOL">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-HOL">Bom</label>
 
                         </div>
@@ -279,7 +281,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-HOL" name="mencao" value="MB-HOL">
+                                id="MB-HOL" name="mention" value="MB-HOL">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-HOL">Muito Bom</label>
 
                         </div>
@@ -308,7 +310,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-ARG" name="mencao" value="I-ARG">
+                                id="I-ARG" name="mention" value="I-ARG">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-ARG">Insuficiente</label>
 
                         </div>
@@ -317,7 +319,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-ARG" name="mencao" value="R-ARG">
+                                id="R-ARG" name="mention" value="R-ARG">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-ARG">Regular</label>
 
                         </div>
@@ -325,7 +327,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-ARG" name="mencao" value="B-ARG">
+                                id="B-ARG" name="mention" value="B-ARG">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-ARG">Bom</label>
 
                         </div>
@@ -334,7 +336,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-ARG" name="mencao" value="MB-ARG">
+                                id="MB-ARG" name="mention" value="MB-ARG">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-ARG">Muito Bom</label>
 
                         </div>
@@ -364,7 +366,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-POR" name="mencao" value="I-POR">
+                                id="I-POR" name="mention" value="I-POR">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-POR">Insuficiente</label>
 
                         </div>
@@ -373,7 +375,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-POR" name="mencao" value="R-POR">
+                                id="R-POR" name="mention" value="R-POR">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-POR">Regular</label>
 
                         </div>
@@ -381,7 +383,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-POR" name="mencao" value="B-POR">
+                                id="B-POR" name="mention" value="B-POR">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-POR">Bom</label>
 
                         </div>
@@ -390,7 +392,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-POR" name="mencao" value="MB-POR">
+                                id="MB-POR" name="mention" value="MB-POR">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-POR">Muito Bom</label>
 
                         </div>
@@ -419,7 +421,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-BRA" name="mencao" value="I-BRA">
+                                id="I-BRA" name="mention" value="I-BRA">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-BRA">Insuficiente</label>
 
                         </div>
@@ -428,7 +430,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-BRA" name="mencao" value="R-BRA">
+                                id="R-BRA" name="mention" value="R-BRA">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-BRA">Regular</label>
 
                         </div>
@@ -436,7 +438,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-BRA" name="mencao" value="B-BRA">
+                                id="B-BRA" name="mention" value="B-BRA">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-BRA">Bom</label>
 
                         </div>
@@ -445,7 +447,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-BRA" name="mencao" value="MB-BRA">
+                                id="MB-BRA" name="mention" value="MB-BRA">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-BRA">Muito Bom</label>
 
                         </div>
@@ -474,7 +476,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-DIN" name="mencao" value="I-DIN">
+                                id="I-DIN" name="mention" value="I-DIN">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-DIN">Insuficiente</label>
 
                         </div>
@@ -483,7 +485,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-DIN" name="mencao" value="R-DIN">
+                                id="R-DIN" name="mention" value="R-DIN">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-DIN">Regular</label>
 
                         </div>
@@ -491,7 +493,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-DIN" name="mencao" value="B-DIN">
+                                id="B-DIN" name="mention" value="B-DIN">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-DIN">Bom</label>
 
                         </div>
@@ -500,7 +502,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-DIN" name="mencao" value="MB-DIN">
+                                id="MB-DIN" name="mention" value="MB-DIN">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-DIN">Muito Bom</label>
 
                         </div>
@@ -529,7 +531,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-MEX" name="mencao" value="I-MEX">
+                                id="I-MEX" name="mention" value="I-MEX">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-MEX">Insuficiente</label>
 
                         </div>
@@ -538,7 +540,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-MEX" name="mencao" value="R-MEX">
+                                id="R-MEX" name="mention" value="R-MEX">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-MEX">Regular</label>
 
                         </div>
@@ -546,7 +548,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-MEX" name="mencao" value="B-MEX">
+                                id="B-MEX" name="mention" value="B-MEX">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-MEX">Bom</label>
 
                         </div>
@@ -555,7 +557,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-MEX" name="mencao" value="MB-MEX">
+                                id="MB-MEX" name="mention" value="MB-MEX">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-MEX">Muito Bom</label>
 
                         </div>
@@ -584,7 +586,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-FRA" name="mencao" value="I-FRA">
+                                id="I-FRA" name="mention" value="I-FRA">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-FRA">Insuficiente</label>
 
                         </div>
@@ -593,7 +595,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-FRA" name="mencao" value="R-FRA">
+                                id="R-FRA" name="mention" value="R-FRA">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-FRA">Regular</label>
 
                         </div>
@@ -601,7 +603,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-FRA" name="mencao" value="B-FRA">
+                                id="B-FRA" name="mention" value="B-FRA">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-FRA">Bom</label>
 
                         </div>
@@ -610,7 +612,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-FRA" name="mencao" value="MB-FRA">
+                                id="MB-FRA" name="mention" value="MB-FRA">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-FRA">Muito Bom</label>
 
                         </div>
@@ -627,9 +629,11 @@
                 <fieldset class="swiper-slide flex flex-col items-left justify-center p-3 md:p-5 space-y-3"
                     data-swiper-slide-index="11" role="group" aria-label="12 / 12">
 
-                    <h2 class="text-white text-xs sm:text-md md:text-lg lg:text-xl">2º MTEC Logística (Tarde) - Estados Unidos</h2>
+                    <h2 class="text-white text-xs sm:text-md md:text-lg lg:text-xl">2º MTEC Logística (Tarde) - Estados
+                        Unidos</h2>
 
-                    <img src="{{url('images/usa.png')}}" class="block w-full h-44 sm:h-52 md:h-60 lg:h-68 xl:h-76 rounded-md">
+                    <img src="{{ url('images/usa.png') }}"
+                        class="block w-full h-44 sm:h-52 md:h-60 lg:h-68 xl:h-76 rounded-md">
 
                     <div class="flex justify-between items-center text-gray-netflix w-full p-1 border border-red-600">
 
@@ -637,7 +641,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-EUA" name="mencao" value="I-EUA">
+                                id="I-EUA" name="mention" value="I-EUA">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-EUA">Insuficiente</label>
 
                         </div>
@@ -646,7 +650,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-EUA" name="mencao" value="R-EUA">
+                                id="R-EUA" name="mention" value="R-EUA">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-EUA">Regular</label>
 
                         </div>
@@ -654,7 +658,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-EUA" name="mencao" value="B-EUA">
+                                id="B-EUA" name="mention" value="B-EUA">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-EUA">Bom</label>
 
                         </div>
@@ -663,7 +667,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-EUA" name="mencao" value="MB-EUA">
+                                id="MB-EUA" name="mention" value="MB-EUA">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-EUA">Muito Bom</label>
 
                         </div>
