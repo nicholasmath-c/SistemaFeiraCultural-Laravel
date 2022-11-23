@@ -9,9 +9,9 @@
     <section class="h-auto flex flex-col justify-around p-3 md:p-5 border border-blue-600">
 
         <!-- Carrossel -->
-        <form method="POST" action="{{url('visitor-avaliations')}}"
+        <form id="frmAvaliation" name="frmAvaliation" method="POST" action="{{url('/visitor-avaliation')}}"
             class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events bg-black/80 w-11/12 mx-auto p-3 md:p-5 rounded-md border border-red-600">
-
+            @csrf
             <h1 class="text-white text-lg sm:text-xl md:text-3xl m-3 md:m-5">Catálogo de Apresentações</h1>
 
             <div class="swiper-wrapper" id="swiper-wrapper-9fd32ebcd2a3ccaa" aria-live="polite"
@@ -68,9 +68,9 @@
 
                     </div>
 
-                    <textarea id="JPcomment"
+                    <textarea id="JPcomment" name="JPcomment"
                         class="bg-black-netflix placeholder:text-gray-netflix text-sm sm:text-md md:text-2xl border-none w-full rounded-md text-white"
-                        placeholder="Comentário (Opcional):" rows="3" cols="50"></textarea>
+                        placeholder="Comentário (Opcional):" rows="3" cols="50"><input type="text" ></textarea>
 
                 </fieldset>
 
@@ -685,8 +685,8 @@
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
 
             <input type="submit"
-                class="block bg-red-netflix px-3 py-2 rounded-md text-white text-xs md:text-md text-center mx-auto my-2 w-11/12 hover:bg-red-netflix/95"
-                placeholder="Enviar"></input>
+            class="block bg-red-netflix px-3 py-2 rounded-md text-white text-xs md:text-md text-center mx-auto my-2 w-11/12 hover:bg-red-netflix/95"
+            placeholder="Enviar">
 
         </form>
 

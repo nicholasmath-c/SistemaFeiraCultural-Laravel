@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Avaliation;
 
 class VisitorAvaliationController extends Controller
 {
@@ -14,7 +15,7 @@ class VisitorAvaliationController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -35,7 +36,7 @@ class VisitorAvaliationController extends Controller
      */
     public function store(Request $request)
     {
-        $cad=$this->Avaliation::create([
+        Avaliation::create([
             'email_visitor'=>$request->session()->get('visitor'),
             'project'=>'1º MTEC Administração (Manhã) -
             Japão',
@@ -43,9 +44,7 @@ class VisitorAvaliationController extends Controller
             'comment'=>$request->JPcomment
         ]);
 
-        if($cad){
-            return redirect('/');
-        }
+        return redirect('/');
     }
 
     /**

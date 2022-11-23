@@ -14,4 +14,8 @@ class Visitor extends Authenticatable
     protected $table='visitors';
 
     protected $fillable=['name', 'email', 'cellphone','friend_family'];
+
+    public function relAvaliation(){
+        $this->hasMany('App\Models\Avaliation', 'id_visitor');
+    }
 }

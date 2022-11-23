@@ -30,4 +30,4 @@ Route::prefix('admin')->group(function(){
     Route::resource('/visitors', VisitorController::class);
 });
 
-Route::resource('visitor-avaliations', VisitorAvaliationController::class);
+Route::resource('/visitor-avaliation', VisitorAvaliationController::class);
