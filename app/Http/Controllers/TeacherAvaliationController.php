@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Avaliation;
 
-class VisitorAvaliationController extends Controller
+class TeacherAvaliationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class VisitorAvaliationController extends Controller
      */
     public function index()
     {
-
+        //
     }
 
     /**
@@ -25,7 +24,7 @@ class VisitorAvaliationController extends Controller
      */
     public function create()
     {
-        return view('visitor-avaliation');
+        return view("teacher-avaliation");
     }
 
     /**
@@ -36,15 +35,7 @@ class VisitorAvaliationController extends Controller
      */
     public function store(Request $request)
     {
-        Avaliation::create([
-            'email_visitor'=>$request->session()->get('visitor'),
-            'project'=>'1º MTEC Administração (Manhã) -
-            Japão',
-            'mention'=>$request->JPmention,
-            'comment'=>$request->input('JPcomment')
-        ]);
-
-        return redirect('/');
+        //
     }
 
     /**

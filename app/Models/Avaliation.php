@@ -13,13 +13,9 @@ class Avaliation extends Model
     use HasApiTokens, HasFactory, Notifiable;
     protected $table='avaliations';
     
-    protected $fillable=['id_teacher', 'email_visitor', 'project', 'mention', 'comment'];
+    protected $fillable=['id_teacher', 'project', 'mention', 'comment'];
 
     public function relTeacher(){
         $this->hasOne('App\Models\Teacher', 'id', 'id_teacher');
-    }
-
-    public function relVisitor(){
-        $this->hasOne('App\Models\Visitor', 'id', 'id_visitor');
     }
 }

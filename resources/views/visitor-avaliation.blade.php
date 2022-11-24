@@ -29,7 +29,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/2560px-Flag_of_Japan.svg.png"
                         class="block w-full h-44 sm:h-52 md:h-60 lg:h-68 xl:h-76 rounded-md">
 
-                    <div class="flex justify-between items-center text-gray-netflix w-full p-1 border border-red-600">
+                    <div class="flex justify-between items-center text-gray-netflix w-full p-1">
 
                         <div class="flex flex-col justify-center items-center space-y-1">
 
@@ -68,9 +68,9 @@
 
                     </div>
 
-                    <textarea id="JPcomment" name="JPcomment"
+                    <input id="JPcomment" name="JPcomment"
                         class="bg-black-netflix placeholder:text-gray-netflix text-sm sm:text-md md:text-2xl border-none w-full rounded-md text-white"
-                        placeholder="Comentário (Opcional):" rows="3" cols="50"><input type="text" ></textarea>
+                        placeholder="Comentário (Opcional):"/>
 
                 </fieldset>
 
@@ -90,7 +90,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-AU" name="mention" value="I-AU">
+                                id="AUmentio" name="AUmention" value="I">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-AU">Insuficiente</label>
 
                         </div>
@@ -99,7 +99,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-AU" name="mention" value="R-AU">
+                                id="AUmention" name="AUmention" value="R">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-AU">Regular</label>
 
                         </div>
@@ -107,7 +107,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-AU" name="mention" value="B-AU">
+                                id="AUmention" name="AUmention" value="B">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-AU">Bom</label>
 
                         </div>
@@ -116,16 +116,16 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-AU" name="mention" value="MB-AU">
+                                id="AUmention" name="AUmention" value="MB">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-AU">Muito Bom</label>
 
                         </div>
 
                     </div>
 
-                    <textarea id="CMT-AU"
+                    <input id="AUcomment" name="AUcomment"
                         class="bg-black-netflix placeholder:text-gray-netflix text-sm sm:text-md md:text-2xl border-none w-full rounded-md text-white"
-                        placeholder="Comentário (Opcional):" rows="3" cols="50"></textarea>
+                        placeholder="Comentário (Opcional):"/>
 
                 </fieldset>
 
@@ -145,7 +145,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="I-ING" name="mention" value="I-ING">
+                                id="INGmention" name="INGmention" value="I">
                             <label class="text-sm sm:text-md md:text-2xl" for="I-ING">Insuficiente</label>
 
                         </div>
@@ -154,7 +154,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="R-ING" name="mention" value="R-ING">
+                                id="INGmention" name="INGmention" value="R">
                             <label class="text-sm sm:text-md md:text-2xl" for="R-ING">Regular</label>
 
                         </div>
@@ -162,7 +162,7 @@
                         <div class="flex flex-col justify-center items-center space-y-1">
 
                             <input type="radio" class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5"
-                                id="B-ING" name="mention" value="B-ING">
+                                id="INGmention" name="INGmention" value="B">
                             <label class="text-sm sm:text-md md:text-2xl" for="B-ING">Bom</label>
 
                         </div>
@@ -171,7 +171,7 @@
 
                             <input type="radio"
                                 class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                id="MB-ING" name="mention" value="MB-ING">
+                                id="INGmention" name="INGmention" value="MB">
                             <label class="text-sm sm:text-md md:text-2xl" for="MB-ING">Muito Bom</label>
 
                         </div>

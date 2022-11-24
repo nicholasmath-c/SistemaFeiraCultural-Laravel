@@ -6,22 +6,22 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
-use App\Models\Visitor;
+use App\Models\Teacher;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 class AuthController extends Controller
 {
-    public function visitor_store(Request $request)
+    public function teacher_store(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
+            'registration' => 'required|max_digits:5',
         ]);
 
-        if (Visitor::where('email', $request->email)->first()) {
-            $request->session()->put('visitor', $request->input('email'));
-            return redirect('/visitor-avaliation/create');
+        if (Teacher::where('registration', $request->registration)->first()) {
+            $request->session()->put('teacher', $request->input('registration'));
+            return redirect('/teacher-avaliation/create');
         } else {
-            return redirect('visitor/login')->with('message', 'O e-mail inserido não corresponde a nenhum cadastro.');
+            return redirect('teacher/login')->with('message', 'A matrícula inserida não corresponde a nenhum cadastro.');
         }
     }
 }
