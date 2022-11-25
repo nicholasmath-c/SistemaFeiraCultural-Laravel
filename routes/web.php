@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\VisitorAvaliationController;
+use App\Http\Controllers\VisitorAvaliationControllerTest;
 use App\Http\Controllers\TeacherAvaliationController;
 
 /*
@@ -22,7 +23,10 @@ Route::get('/', function(){
 
 Route::prefix('teacher')->group(function(){
     Route::get('/login', function(){
-        return view('teacher-login');
+        if(!Session::has('teacher_registration'))
+            return view('teacher-login');
+        else
+            return redirect('teacher-avaliation/create');
     })->name('login');
     Route::post('/login', [AuthController::class, 'teacher_store']);
 });
@@ -31,5 +35,14 @@ Route::prefix('admin')->group(function(){
     Route::resource('/visitors', VisitorController::class);
 });
 
-Route::resource('/visitor-avaliation', VisitorAvaliationController::class);
-Route::resource('/teacher-avaliation', TeacherAvaliationController::class);
+Route::resource('/visitor-avaliation', VisitorAvaliationController::class, [
+    'names' => [
+        'store'=>'visitor-avaliation.store'
+    ]
+]);
+
+Route::resource('/teacher-avaliation', TeacherAvaliationController::class, [
+    'names' => [
+        'store'=>'teacher-avaliation.store'
+    ]
+]);

@@ -12,7 +12,7 @@
 
         <div class="grid grid-cols-2 gap-6">
 
-            <a href="{{url('/visitor/login')}}" class="flex flex-col justify-center items-center space-y-2">
+            <a href="{{url('/visitor-avaliation/create')}}" class="flex flex-col justify-center items-center space-y-2">
 
                 <img src="{{url("images/aluno.png")}}" class="w-24 h-24 md:w-32 md:h-32 rounded-md hover:animate-pulse">
 

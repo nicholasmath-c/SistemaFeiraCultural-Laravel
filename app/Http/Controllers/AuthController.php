@@ -18,7 +18,7 @@ class AuthController extends Controller
         ]);
 
         if (Teacher::where('registration', $request->registration)->first()) {
-            $request->session()->put('teacher', $request->input('registration'));
+            $request->session()->put('teacher_registration', $request->input('registration'));
             return redirect('/teacher-avaliation/create');
         } else {
             return redirect('teacher/login')->with('message', 'A matrícula inserida não corresponde a nenhum cadastro.');

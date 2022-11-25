@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('avaliations', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_teacher')->nullable();
-            $table->foreign('id_teacher')->references('id')->on('teachers')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('project');
-            $table->string('mention');
-            $table->text('comment')->nullable();
+            $table->string('country');
+            $table->string('classroom');
+            $table->string('img_flag');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('avaliations');
+        Schema::dropIfExists('projects');
     }
 };

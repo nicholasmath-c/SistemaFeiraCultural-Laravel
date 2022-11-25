@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Avaliation;
+use App\Models\Project;
 
 class VisitorAvaliationController extends Controller
 {
@@ -25,7 +26,8 @@ class VisitorAvaliationController extends Controller
      */
     public function create()
     {
-        return view('visitor-avaliation');
+        $project=Project::all();
+        return view('visitor-avaliation', compact('project'));
     }
 
     /**
@@ -37,14 +39,12 @@ class VisitorAvaliationController extends Controller
     public function store(Request $request)
     {
         Avaliation::create([
-            'email_visitor'=>$request->session()->get('visitor'),
-            'project'=>'1º MTEC Administração (Manhã) -
-            Japão',
-            'mention'=>$request->JPmention,
-            'comment'=>$request->input('JPcomment')
+            'id_project'=>$request->id_project,
+            'mention'=>$request->mention,
+            'comment'=>$request->comment
         ]);
 
-        return redirect('/');
+        return redirect('/visitor-avaliation/create')->with('message', 'AVALIAÇÃO REALIZADA COM SUCESSO!');
     }
 
     /**
