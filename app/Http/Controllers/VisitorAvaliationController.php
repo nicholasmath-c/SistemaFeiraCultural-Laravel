@@ -38,6 +38,10 @@ class VisitorAvaliationController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'mention' => 'required'
+        ]);
+
         Avaliation::create([
             'id_project'=>$request->id_project,
             'mention'=>$request->mention,

@@ -38,7 +38,7 @@
 
                                     <input type="radio"
                                         class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                        id="mention" name="mention" value="I">
+                                        id="mention" name="mention" value="I" required>
                                     <label class="text-sm sm:text-md md:text-2xl" for="I">Insuficiente</label>
 
                                 </div>
@@ -47,7 +47,7 @@
 
                                     <input type="radio"
                                         class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                        id="mention" name="mention" value="R">
+                                        id="mention" name="mention" value="R" required>
                                     <label class="text-sm sm:text-md md:text-2xl" for="R">Regular</label>
 
                                 </div>
@@ -56,7 +56,7 @@
 
                                     <input type="radio"
                                         class="bg-black-netflix border-none checked:bg-red-netflix w-5 h-5" id="mention"
-                                        name="mention" value="B">
+                                        name="mention" value="B" required>
                                     <label class="text-sm sm:text-md md:text-2xl" for="B">Bom</label>
 
                                 </div>
@@ -65,7 +65,7 @@
 
                                     <input type="radio"
                                         class="bg-black-netflix border-none active:bg-red-netflix checked:bg-red-netflix w-5 h-5"
-                                        id="mention" name="mention" value="MB">
+                                        id="mention" name="mention" value="MB" required>
                                     <label class="text-sm sm:text-md md:text-2xl" for="MB">Muito Bom</label>
 
                                 </div>
@@ -98,7 +98,15 @@
                 </div>
             </section>
         @endif
-        
+
+        @if (isset($errors) && count($errors) > 0)
+            <div class="content text-center">
+                @foreach ($errors->all() as $error)
+                    <h6 class="text-red-netflix font-bold">{{ $error }}<br></h6>
+                @endforeach
+            </div>
+        @endif
+
     </section>
 @endsection
 

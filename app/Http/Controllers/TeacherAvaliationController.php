@@ -39,6 +39,11 @@ class TeacherAvaliationController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'mention' => 'required',
+            'comment' => 'required',
+        ]);
+
         $teacher = Teacher::where('registration', session()->get('teacher_registration'))->first();
         Avaliation::create([
             'id_teacher'=>$teacher->id,
@@ -47,7 +52,7 @@ class TeacherAvaliationController extends Controller
             'comment'=>$request->comment
         ]);
 
-        return redirect('/visitor-avaliation/create')->with('message', 'AVALIAÇÃO REALIZADA COM SUCESSO!');
+        return redirect('/teacher-avaliation/create')->with('message', 'AVALIAÇÃO REALIZADA COM SUCESSO!');
     }
 
     /**
